@@ -24,4 +24,16 @@ public class UserController {
         model.addAttribute("users", userService.getUsers());
         return "if-unless";
     }
+
+    @GetMapping("/switchcase")
+    public String switchcase(Model model){
+//        List<User> users = new ArrayList<>();
+//        users.add(new User("Ramesh", "ramesh@gmail.com", "ADMIN"));
+//        users.add(new User("Tom", "ramesh@gmail.com", "USER"));
+//        users.add(new User("Bilyu", "ramesh@gmail.com", "ADMIN"));
+//        users.add(new User("Seth", "ramesh@gmail.com", "VENDOR"));
+
+        model.addAttribute("users", new User("Goggins", "ramesh@gmail.com", "ADMIN"));
+        return "switchcase";
+    }
 }
